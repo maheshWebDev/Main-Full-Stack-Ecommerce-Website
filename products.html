@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="product.js" async></script>
 </head>
 <body>
    
@@ -18,12 +19,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Account</a></li>
-                <img src="./images/cart.png" width="30px" height="30px" alt="Cart">
-                <img src="images/menu.png" width="30px" height="30px" class="menu-icon">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>   
 </div>
@@ -35,49 +33,65 @@
     <div class="row">
         <div class="col-4">
             <img src="images/death.png" alt="">
-            <h4>Death an inside story</h4>
-            <p>$50.00</p>
-            <button class="btn2">Add To Cart</button>
+            <h4>Death an inside story</h4><br>
+            <h3>$30.00</h3>
+           <button class="btn2">Add TO Cart</button>
         </div>
         <div class="col-4">
             <img src="images/got.png" alt="">
-            <h4>Game Of Thrones</h4>
-            <p>$40.00</p>
-            <button class="btn2">Add To Cart</button>
+            <h4>Game Of Thrones</h4><br>
+            <h3>$40.00</h3>
+            <button class="btn2">Add TO Cart</button>
         </div>
         <div class="col-4">
             <img src="images/mind.png" alt="">
-            <h4>The Power of your subconscious mind</h4>
-            <p>$30.00</p>
-            <button class="btn2">Add To Cart</button>
+            <h4>The Power of your subconscious mind</h4><br>
+         <h3>$30.00</h3>
+         <button class="btn2">Add TO Cart</button>
         </div>
         <div class="col-4">
             <img src="images/sign.png" alt="">
-            <h4>Where The Crawdads Sing</h4>
-            <p>$10.00</p>
-            <button class="btn2">Add To Cart</button>
+            <h4>Where The Crawdads Sing</h4><br>
+            <h3>$40.00</h3>
+            <button class="btn2">Add TO Cart</button>
         </div>
-    </div>
-    <div class="row">
         <div class="col-4">
             <img src="images/wakinglife.png" alt="">
-            <h4>Waking Life</h4>
-            <p>$40.00</p>
-            <button class="btn2">Add To Cart</button>
+            <h4>Waking Life</h4><br>
+            <h3>$20.00</h3>
+            <button class="btn2">Add TO Cart</button>
         </div>
         <div class="col-4">
             <img src="images/upload.png" alt="">
-            <h4>Upload</h4>
-            <p>$30.00</p>
-            <button class="btn2">Add To Cart</button>
+            <h4>Upload</h4><br>
+            <h3>$33.00</h3>
+            <button class="btn2">Add TO Cart</button>
         </div>
         <div class="col-4">
             <img src="images/mulholland dr.png" alt="">
-            <h4>Mulholland Drive</h4>
-            <p>$10.00</p>
-            <button class="btn2">Add To Cart</button>
+            <h4>Mulholland Drive</h4><br>
+            <h3>$40.00</h3>
+            <button class="btn2">Add TO Cart</button>
         </div>
+    
     </div>
+   
+    <section class="container content-section">
+        <h2 class="section-header"></h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+            
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$00.00</span>
+        </div>
+        <button class="btn2 btn-primary btn-purchase" type="button">PURCHASE</button>
+    </section>
 
    <!------footer---->
    <div class="footer">
@@ -93,6 +107,5 @@
     </div>
    </div>
 
-    
 </body>
 </html> 
