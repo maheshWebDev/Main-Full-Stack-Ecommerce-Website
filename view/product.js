@@ -26,6 +26,8 @@ button.addEventListener('click',addToCart);
 
 document.getElementsByClassName('btn-purchase')[0].addEventListener('click',purchaseClicked)
 
+
+
 }
 
 function purchaseClicked(){
@@ -57,11 +59,13 @@ function quantityChange(event){
 }
 
 function addToCart(event){
+    
     let button = event.target; 
      let productItem = button.parentElement;
      let title = productItem.getElementsByTagName('h4')[0].innerText;
      let price = productItem.getElementsByTagName('h3')[0].innerText;
      let imageSrc = productItem.getElementsByTagName('img')[0].src;
+     console.log(title,price,imageSrc)
      addProductToCart(title,price,imageSrc);
      updateCartTotal();
 }
@@ -115,7 +119,27 @@ document.getElementsByClassName('cart-total-price')[0].innerText = '$'+total
 }
 
 
-// product page 
 
 
+
+// 
+const parentNode = document.getElementsByClassName('row')[0];
+// console.log(parentNode)
+
+window.addEventListener('load',()=>{
+    axios.get('http://localhost:3000/products').then((products)=>{
+        console.log(products.data)
+        products.data.forEach(product => {
+            let productHtml = `<div class="col-4">
+            <img src="${product.ImageURL}" alt="">
+            <h4>${product.title}</h4><br>
+            <h3>$ ${product.Price}</h3>
+            <button class="btn2">Add TO Cart</button>
+        </div>`
+        parentNode.innerHTML +=productHtml
+        });
+    }).catch((err)=>{
+        console.log(err);
+    })
+});
 
